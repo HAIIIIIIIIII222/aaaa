@@ -1,81 +1,91 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Cache-control" content="public">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<html>
+<head>
+    <title>Zone browser</title>
+    <link rel="icon" type="image/x-icon" href="images/mordor.png">
+    <link rel="stylesheet" href="css/hauntaholic.css">
+    <meta name="description" content="Haunted - Browser">
+    </script><script src="js/haunted.js"></script>
+    <script>
+        function handleClick() {
+            const nameElements = document.querySelectorAll('.clickmessage');
+                nameElements.forEach(function(element) {
+                    element.style.display = 'none';
+                });
     
+            const audioUrls = [
+                "audio6.mp3",
+                "audio7.mp3",
+    
+            ];
+    
+            const rndAudio = Math.floor(Math.random() * audioUrls.length);
+    
+            const audioItem = new Audio(audioUrls[rndAudio]);
+            audioItem.volume = 0.1;
+            audioItem.loop = true;
+            audioItem.play();
+    
+            document.removeEventListener("click", handleClick);
+        }
+    
+        document.addEventListener("click", handleClick);
+    </script>
+    </body>
+    <style>
+        body {
+            cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"%3E%3Ctext x="0" y="15" font-family="Arial" font-size="20" fill="red"%3E⸸%3C/text%3E%3C/svg%3E') 10 10, auto;
+        }
+    </style>
+<style>
+    body {
+        font-family: 'Courier New', monospace;
+        background-color: #000;
+        color: rgb(255, 0, 0);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+    }
 
-        <link rel="preload" href="WOFF/FreeSerif-YO4a.woff" as="font" type="font/woff">
-        <link rel="preload" href="WOFF/jackeyfont.woff" as="font" type="font/woff">
-        <link rel="preload" href="index.css" as="style">
-        <link rel="preload" href="crt.css" as="style">          
-        <link rel="preload" href="loading.css" as="style">
-            <link rel="stylesheet" href="css/index.css">
-            <link rel="stylesheet" href="css/crt.css">
-            <link rel="stylesheet" href="css/loading.css">
+    #file-browser {
+        width: 300px;
+        border: 1px solid rgb(255, 0, 0);
+        padding: 10px;
+        background-color: #080808;
+        margin-top: 20px;
+    }
 
-    <link rel="icon" href="favicon.html" type="image/x-icon">
+    .file {
+        display: block;
+        margin: 5px 0;
+        cursor: pointer;
+        color: rgb(255, 0, 0);
+        text-decoration: none;
+    }
 
-    <title>「Zone」</title>
-    <meta name="theme-color" content="#000>
-
-    <meta property=" og:title"="">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="$VLH$">
+    .file:hover {
+        text-decoration: underline;
+    }
+</style>
 </head>
-
 <body>
+<u><a class="clickmessage" >click anywhere for music</a><u>     
+<center><pre style="font: 20px/19px monospace; overflow-x: hidden; overflow-y: hidden; border: none;">
 
-<crt id="crt">   
-
-</crt>
-
-<div class="load">        
-    <div class="ichi 一">
-        <h1 class="" style="float: left; margin: 0.5em;">Zone<br>Trends</h1>
-        <img src="images/cock.gif" alt="Monkey" style="height: 128px; float: right; padding: 1em;">
-            <p style="display: inline-block; text-align: left; padding-left: 1em; padding-top: 50px; font-size: 1.3em;">Zone (C)2015-2023 RSY &amp; Associates. All Rights Reserved.</p><br>
-            <br><br>
-            <p style="padding-left: 1em; font-size: 1.3em;">Till zone, brother</p> <br>
-            <br>
-            <br>
-            <div class="anim-typewriter" style="padding-left: 1em; font-size: 1.3em;">
-                <p>[ <em class="green">OK</em> ]  �&nbsp;Loading Random Services like a hakka...</p><br>
-            </div>
-            <div class="anim" style="padding-left: 1em; font-size: 1.3em;">
-                <p>[ <em class="green">OK</em> ]  �&nbsp;Starting NetworkManager...</p><br>
-            </div>
-            <div class="anim2" style="padding-left: 1em; font-size: 1.3em;">
-                <p>[ <em class="red">FAILED</em> ]  �&nbsp;Failed to start:�&nbsp;Brain...</p><br>
-            </div>
-            
-            <br>
-            <br>
-            <br>
-            <br>
-            <p style="padding-left: 1em; font-size: 1.3em;">
-            Press DEL Key to go to BIOS ...<br>
-            Press Ctrl+W to get Free XMR!
-            </p>
-    </div>
-    <div class="ni 二"></div>
-    <div class="san 三"></div>
-    <div class="shi 四">
-        <div class="window 四">
-            <div class="logo">
-              <p class="top">zone</p>
-              <p class="mid">Zone<span>OS</span></p>
-              <p class="bottom">Reborn</p>
-            </div>
-            <div class="container">
-              <div class="box"></div>
-              <div class="box"></div>
-              <div class="box"></div>
-            </div>
-          </div>
-    </div>
-    <meta http-equiv="refresh" content="5; URL=desktop.html">
-
-
-
-</div></body></html>
+    ███████╗░█████╗░███╗░░██╗███████╗
+    ╚════██║██╔══██╗████╗░██║██╔════╝
+    ░░███╔═╝██║░░██║██╔██╗██║█████╗░░
+    ██╔══╝░░██║░░██║██║╚████║██╔══╝░░
+    ███████╗╚█████╔╝██║░╚███║███████╗
+    ╚══════╝░╚════╝░╚═╝░░╚══╝╚══════╝
+</center>
+<div id="file-browser">
+    <u><h2>Hatunted Index</h2><u>
+    <a class="file" href="https://doxbin.com/user/recover">riot</a><a class="file" href="https://doxbin.com/user/clowns">listed</a><a class="file" href="https://doxbin.com/user/stress">Sat</a><a class="file" href="https://doxbin.com/user/kyrofrost">court</a><a class="file" href="https://doxbin.com/user/xx">swat</a><a class="file" href="https://haunt.site/">ZONE</a></div>
+<img src="https://counter.lunoxia.net/get/@haunt?theme=rule34" alt=":name" />
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vef91dfe02fce4ee0ad053f6de4f175db1715022073587" integrity="sha512-sDIX0kl85v1Cl5tu4WGLZCpH/dV9OHbA4YlKCuCiMmOQIk4buzoYDZSFj+TvC71mOBLh8CDC/REgE0GX0xcbjA==" data-cf-beacon='{"rayId":"88fe5875e8729705","r":1,"version":"2024.4.1","token":"28084b00896344c9aca372ef23acf65e"}' crossorigin="anonymous"></script>
+</body>
+</html>
